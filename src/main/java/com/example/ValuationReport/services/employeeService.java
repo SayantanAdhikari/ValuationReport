@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 @Service
-public class employeeService {
+public class employeeService implements IEmployeeService{
     @Autowired
     private EmployeeRepo employeeRepo;
 
@@ -19,6 +19,28 @@ public class employeeService {
     {
         return new EmployeeDto();
     }
+
+    @Override
+    public EmployeeDto GetAllEmployees() {
+        //From(employeeRepo.getAllEmployees());
+        return null;
+    }
+
+    @Override
+    public EmployeeDto GetEmployeeById(Long Id) {
+        return null;
+    }
+
+    @Override
+    public String UpdateEmployeeById(Long Id) {
+        return null;
+    }
+
+    @Override
+    public String DeleteEmployeeById(Long id) {
+        return "";
+    }
+
 
     private Employee From(EmployeeDto employeeDto)
     {
@@ -35,6 +57,11 @@ public class employeeService {
     }
     private EmployeeDto From(Employee employee)
     {
+        EmployeeDto employeeDto = new EmployeeDto();
+        employeeDto.setName(employee.getName());
+        employeeDto.setPhoneNumber(employee.getPhoneNumber());
+        employeeDto.setEmail(employee.getEmail());
+
         return new EmployeeDto();
     }
 }

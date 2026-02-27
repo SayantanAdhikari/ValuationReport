@@ -26,7 +26,7 @@ public class Deed{
     @JoinColumn(name="property_id")
     private Property property;
     @ManyToOne
-    @JoinColumn(name="deed_id")
+    @JoinColumn(name="boundary_id")
     private Boundary boundary;
     private Date createdAt;
     private Date updatedAt;

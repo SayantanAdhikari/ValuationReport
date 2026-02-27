@@ -16,8 +16,7 @@ public class Bank extends BaseModel{
     @SequenceGenerator(name = "bank_branch_seq", sequenceName = "bank_branch_seq", allocationSize = 1)
     private Long branchId;
     private String branchName;
-    @OneToOne
-    @JoinColumn(name="bank_id")
+    @OneToOne(mappedBy = "bank",cascade = CascadeType.ALL)
     private Address address;
     @OneToMany(mappedBy = "bank",cascade = CascadeType.ALL)
     private List<Report> reports;

@@ -32,6 +32,7 @@ public class Address extends BaseModel{
     private Valuer valuer;
     @OneToOne(mappedBy = "address",cascade = CascadeType.ALL)
     private Property property;
-    @OneToOne(mappedBy = "address",cascade = CascadeType.ALL)
+    @OneToOne
+    @JoinColumn(name="bank_id")
     private Bank bank;
 }
