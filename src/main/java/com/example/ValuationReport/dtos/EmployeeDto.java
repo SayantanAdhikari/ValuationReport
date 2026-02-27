@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class EmployeeDto {
     //private Long employeeId;          //will be auto generated
-    private Valuer valuer;
+    private Valuer valuer_id;
     private String name;
     private String phoneNumber;
     private String email;

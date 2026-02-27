@@ -21,8 +21,8 @@ public class Valuer extends BaseModel{
     private String phoneNumber1;
     private String phoneNumber2;
     private String otherDetails;
-    @OneToMany(mappedBy = "valuer",cascade = CascadeType.ALL)
-    private List<Address> addresses;
+    @OneToOne(mappedBy = "valuer",cascade = CascadeType.ALL)
+    private Address address;
     @OneToMany(mappedBy = "valuer",cascade = CascadeType.ALL)
     private List<Report> reports;
     @OneToMany(mappedBy = "valuer",cascade = CascadeType.ALL)

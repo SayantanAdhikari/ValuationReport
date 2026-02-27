@@ -27,7 +27,7 @@ public class Address extends BaseModel{
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "valuer_id")
     private Valuer valuer;
     @OneToOne(mappedBy = "address",cascade = CascadeType.ALL)
